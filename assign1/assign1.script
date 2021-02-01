@@ -1,0 +1,60 @@
+Script started on 2021-01-31 21:11:13-07:00
+]0;son.tran@csa2:~/CPSC_355/assignment/assign1son.tran@csa2:~/CPSC_355/assignment/assign1$ exit./assign1 occurrences.txt[1Pgcc assign1.c -o assign1
+]0;son.tran@csa2:~/CPSC_355/assignment/assign1son.tran@csa2:~/CPSC_355/assignment/assign1$ gcc assign1.c -o assign1exit[K./assign1 occurrences.txt
+The file occurrences.txt is opened.
+Initializing table with provided values.
+9 1 0 0 0 0 7 3 4 0 
+1 3 5 8 5 3 0 5 4 0 
+7 3 9 0 0 0 5 8 0 0 
+0 0 0 5 4 5 3 0 5 1 
+0 0 1 6 3 1 4 7 0 7 
+2 5 1 0 0 0 0 0 0 0 
+5 4 0 1 2 7 7 9 2 1 
+Enter the index of the word you are searching for (from 0 to 9): 5
+How many top documents do you want to retrieve (from 0 to 7): 2
+The top 2 documents with the highest frequencies of the searched word at index 5 are:
+Document 3
+Document 6
+Log file generated.
+]0;son.tran@csa2:~/CPSC_355/assignment/assign1son.tran@csa2:~/CPSC_355/assignment/assign1$ ./assign1 occurrences.txt[1Pgcc assign1.c -o assign1exit[K./assign1 occurrences.txt[K
+No arguments passed.
+Initializing table with random values.
+1 4 0 4 9 6 2 8 5 0 
+4 0 3 3 1 6 2 7 3 3 
+9 1 4 6 2 9 3 5 7 6 
+2 0 2 2 4 2 1 8 2 6 
+8 8 8 2 3 9 0 7 8 3 
+1 9 6 7 5 8 6 8 4 5 
+6 8 7 9 1 3 3 4 2 7 
+Enter the index of the word you are searching for (from 0 to 9): 8
+How many top documents do you want to retrieve (from 0 to 7): 5
+The top 5 documents with the highest frequencies of the searched word at index 8 are:
+Document 4
+Document 2
+Document 0
+Document 1
+Document 3
+Log file generated.
+]0;son.tran@csa2:~/CPSC_355/assignment/assign1son.tran@csa2:~/CPSC_355/assignment/assign1$ ./assign1
+No arguments passed.
+Initializing table with random values.
+4 8 5 9 2 6 9 2 3 5 
+3 6 1 7 6 2 5 1 3 0 
+6 3 2 8 2 0 6 5 6 2 
+1 1 2 8 2 5 6 4 7 0 
+9 1 8 2 0 6 6 5 0 0 
+7 8 5 9 7 9 1 3 6 7 
+8 9 0 0 7 5 7 4 9 5 
+Enter the index of the word you are searching for (from 0 to 9): 8
+How many top documents do you want to retrieve (from 0 to 7): 5
+The top 5 documents with the highest frequencies of the searched word at index 8 are:
+Document 3
+Document 6
+Document 2
+Document 5
+Document 1
+Log file generated.
+]0;son.tran@csa2:~/CPSC_355/assignment/assign1son.tran@csa2:~/CPSC_355/assignment/assign1$ exit
+exit
+
+Script done on 2021-01-31 21:11:41-07:00
