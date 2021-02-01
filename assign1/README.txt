@@ -1,6 +1,6 @@
 ## Submitter info
 * Author: Tran, Andy (Son)
-* UCID: 30019100
+* UCID: #########
 * Course: CPSC 355 W2021
 
 ## Assignment 1 info 
