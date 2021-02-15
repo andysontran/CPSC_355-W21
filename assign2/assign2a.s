@@ -29,7 +29,7 @@ To verify, run under gdb, capturing output using the script UNIX command.
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // Define format string for call to printf()
-fmt:        .string "x = %d, y = %d: Current maximum for y = %d\n"      // Output format
+display:    .string "x = %d, y = %d: Current maximum for y = %d\n"      // Output format
             
             // Define the main function for the program
             .balign 4                                                   // Instructions must be word aligned by 4 bits 
@@ -70,8 +70,8 @@ test:       cmp     x19, 6                                              // Compa
             cmp     x20, x21                                            // Compare the current value of y to the current maximum of y
             b.gt    Ymax                                                // If the current value of y > current maximum of y, then branch to "Ymax" to set the current maximum value of y to the current value of y
 
-print:      adrp    x0, fmt                                             // Set first argument of printf()
-            add     x0, x0, :lo12:fmt                                   // Add low 12 bits to x0 register 
+print:      adrp    x0, display                                         // Set first argument of printf()
+            add     x0, x0, :lo12:display                               // Add low 12 bits to x0 register 
             mov     x1, x19                                             // Store current value of x in x1 register for printf()
             mov     x2, x20                                             // Store current value of y in x2 register for printf()
             mov     x3, x21                                             // Store current maximum value of y in x3 register for printf()
@@ -87,3 +87,4 @@ Ymax:       mov     x21, x20                                            // Overr
 done:       mov     x0, 0                                               // Set return value     
             ldp     x29, x30, [sp], 16                                  // Restore stack
             ret                                                         // Return to OS
+            

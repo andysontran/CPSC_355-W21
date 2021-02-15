@@ -1,0 +1,145 @@
+Script started on 2021-02-14 23:41:42-07:00
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ exitgdb assign2b[14@cc assign2b.s -o[C[C[C[C[C[C[C[C[Cm4 assign2b.asm > assign2b.s
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ m4 assign2b.asm > assign2b.sexit[Kgdb assign2b[14@cc assign2b.s -o[C[C[C[C[C[C[C[C[C
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ gcc assign2b.s -o assign2bm4 assign2b.asm > assign2b.sexit[Kgdb assign2b
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign2b...(no debugging symbols found)...done.
+(gdb) b print
+Breakpoint 1 at 0x400630
+(gdb) r
+Starting program: /home/uga/son.tran/CPSC_355/assignment/assign2/assign2b 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, 0x0000000000400630 in print ()
+(gdb) ds[Kisplay/i $pc
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) p [K/d $x21
+$1 = 96
+(gdb) c
+Continuing.
+x = -5, y = 96: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$2 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = -4, y = -16: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21[C[C[C[C[C[Cc[Kp/d $x21[C[C[C[C[C[Cc[Kp/d $x21
+$3 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = -3, y = -50: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$4 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = -2, y = -36: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$5 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = -1, y = -4: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$6 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 0, y = 16: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$7 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 1, y = -6: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$8 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 2, y = -100: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$9 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 3, y = -296: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$10 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 4, y = -624: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$11 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 5, y = -1114: Current maximum for y = 96
+
+Breakpoint 1, 0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) cp/d $x21
+$12 = 96
+(gdb) p/d $x21[C[C[C[C[C[Cc[K
+Continuing.
+x = 6, y = -1796: Current maximum for y = 96
+[Inferior 1 (process 13471) exited normally]
+(gdb) q
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ exit
+exit
+
+Script done on 2021-02-14 23:43:23-07:00

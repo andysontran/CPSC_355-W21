@@ -73,6 +73,9 @@ loop:       mov     y_r, 0                                              // Set y
 
             cmp     y_r, max_r                                          // Compare the current value of y to the current maximum of y
             b.gt    Ymax                                                // If the current value of y > current maximum value of y, then branch to "Ymax" to set the current maximum value of y to the current value of y
+            b print                                                     // Branch to "print" unconditionally
+
+Ymax:       mov     max_r, y_r                                          // Override the current maximum value of y with the current value of y (new maximum y value), then proceed to "print"
 
 print:      adrp    x0, fmt                                             // Set first argument of printf()
             add     x0, x0, :lo12:fmt                                   // Add low 12 bits to x0 register
@@ -83,10 +86,7 @@ print:      adrp    x0, fmt                                             // Set f
 
             add     x_r, x_r, 1                                         // Increment current value of x by adding immediate value of 1 to x and override
             add     count_r, count_r, 1                                 // Increment loop counter by adding immediate value of 1 to loop counter and override
-            b       test                                                // Branch to "test" to check if current value of x is within the range [-5, 6]
-
-Ymax:       mov     max_r, y_r                                          // Override the current maximum value of y with the current value of y (new maximum y value)
-            b       print                                               // Branch to "print" to display and increment the values
+            b       test                                                // Branch to "test" to check if current value of x is within the range [-5, 6]   
 
 test:       cmp     x_r, 6                                              // Compare the current value of x to the maximum range value of 6 -- PRE-TEST LOOP
             b.le    loop                                                // If x > 6 is satisfied, then branch to "done"

@@ -1,0 +1,244 @@
+Script started on 2021-02-14 23:14:16-07:00
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ g[Kgcc script1[K2[K[K[K[K[K[K[Kassign2a.s -o assign2a
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ gdb assign2a
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign2a...(no debugging symbols found)...done.
+(gdb) b main
+Breakpoint 1 at 0x4005c8
+(gdb) r
+Starting program: /home/uga/son.tran/CPSC_355/assignment/assign2/assign2a 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, 0x00000000004005c8 in main ()
+(gdb) display/i $pc
+1: x/i $pc
+=> 0x4005c8 <main+8>:	mov	x19, #0xfffffffffffffffb    	// #-5
+(gdb) ni
+0x00000000004005cc in main ()
+1: x/i $pc
+=> 0x4005cc <main+12>:	mov	x20, #0x0                   	// #0
+(gdb) ni
+0x00000000004005d0 in main ()
+1: x/i $pc
+=> 0x4005d0 <main+16>:	mov	x21, #0x0                   	// #0
+(gdb) ni
+0x00000000004005d4 in main ()
+1: x/i $pc
+=> 0x4005d4 <main+20>:	mov	x22, #0x0                   	// #0
+(gdb) ni
+0x00000000004005d8 in test ()
+1: x/i $pc
+=> 0x4005d8 <test>:	cmp	x19, #0x6
+(gdb) ni
+0x00000000004005dc in test ()
+1: x/i $pc
+=> 0x4005dc <test+4>:	b.gt	0x400654 <done>
+(gdb) ni
+0x00000000004005e0 in test ()
+1: x/i $pc
+=> 0x4005e0 <test+8>:	mov	x20, #0x0                   	// #0
+(gdb) ni
+0x00000000004005e4 in test ()
+1: x/i $pc
+=> 0x4005e4 <test+12>:	mov	x23, #0xfffffffffffffffb    	// #-5
+(gdb) ni
+0x00000000004005e8 in test ()
+1: x/i $pc
+=> 0x4005e8 <test+16>:	mul	x23, x23, x19
+(gdb) ni
+0x00000000004005ec in test ()
+1: x/i $pc
+=> 0x4005ec <test+20>:	mul	x23, x23, x19
+(gdb) ni
+0x00000000004005f0 in test ()
+1: x/i $pc
+=> 0x4005f0 <test+24>:	mul	x23, x23, x19
+(gdb) ni
+0x00000000004005f4 in test ()
+1: x/i $pc
+=> 0x4005f4 <test+28>:	mov	x24, #0xffffffffffffffeb    	// #-21
+(gdb) p/d $x23
+$1 = 625
+(gdb) ni
+0x00000000004005f8 in test ()
+1: x/i $pc
+=> 0x4005f8 <test+32>:	mul	x24, x24, x19
+(gdb) ni
+0x00000000004005fc in test ()
+1: x/i $pc
+=> 0x4005fc <test+36>:	mul	x24, x24, x19
+(gdb) ni
+0x0000000000400600 in test ()
+1: x/i $pc
+=> 0x400600 <test+40>:	mov	x25, #0x4                   	// #4
+(gdb) x//[Ki $[K[K[K[K[Kp/d $x24
+$2 = -525
+(gdb) ni
+0x0000000000400604 in test ()
+1: x/i $pc
+=> 0x400604 <test+44>:	mul	x25, x25, x19
+(gdb) ni
+0x0000000000400608 in test ()
+1: x/i $pc
+=> 0x400608 <test+48>:	add	x20, x20, x23
+(gdb) x[K[/d[K[K[Kp/d $x25
+$3 = -20
+(gdb) ni
+0x000000000040060c in test ()
+1: x/i $pc
+=> 0x40060c <test+52>:	add	x20, x20, x24
+(gdb) ni
+0x0000000000400610 in test ()
+1: x/i $pc
+=> 0x400610 <test+56>:	add	x20, x20, x25
+(gdb) ni
+0x0000000000400614 in test ()
+1: x/i $pc
+=> 0x400614 <test+60>:	add	x20, x20, #0x10
+(gdb) ni
+0x0000000000400618 in test ()
+1: x/i $pc
+=> 0x400618 <test+64>:	cmp	x22, #0x0
+(gdb) p/d $x20
+$4 = 96
+(gdb) ni
+0x000000000040061c in test ()
+1: x/i $pc
+=> 0x40061c <test+68>:	b.eq	0x40064c <Ymax>  // b.none
+(gdb) ni
+0x000000000040064c in Ymax ()
+1: x/i $pc
+=> 0x40064c <Ymax>:	mov	x21, x20
+(gdb) ni
+0x0000000000400650 in Ymax ()
+1: x/i $pc
+=> 0x400650 <Ymax+4>:	b	0x400628 <print>
+(gdb) p/d #[K$x21
+$5 = 96
+(gdb) ni
+0x0000000000400628 in print ()
+1: x/i $pc
+=> 0x400628 <print>:	adrp	x0, 0x400000
+(gdb) ni
+0x000000000040062c in print ()
+1: x/i $pc
+=> 0x40062c <print+4>:	add	x0, x0, #0x594
+(gdb) ni
+0x0000000000400630 in print ()
+1: x/i $pc
+=> 0x400630 <print+8>:	mov	x1, x19
+(gdb) ni
+0x0000000000400634 in print ()
+1: x/i $pc
+=> 0x400634 <print+12>:	mov	x2, x20
+(gdb) ni
+0x0000000000400638 in print ()
+1: x/i $pc
+=> 0x400638 <print+16>:	mov	x3, x21
+(gdb) ni
+0x000000000040063c in print ()
+1: x/i $pc
+=> 0x40063c <print+20>:	bl	0x400480 <printf@plt>
+(gdb) ni
+x = -5, y = 96: Current maximum for y = 96
+0x0000000000400640 in print ()
+1: x/i $pc
+=> 0x400640 <print+24>:	add	x19, x19, #0x1
+(gdb) ni
+0x0000000000400644 in print ()
+1: x/i $pc
+=> 0x400644 <print+28>:	add	x22, x22, #0x1
+(gdb) ni
+0x0000000000400648 in print ()
+1: x/i $pc
+=> 0x400648 <print+32>:	b	0x4005d8 <test>
+(gdb) ni
+x = -4, y = -16: Current maximum for y = 96
+0x0000000000400640 in print ()
+1: x/i $pc
+=> 0x400640 <print+24>:	add	x19, x19, #0x1
+(gdb) ni
+0x0000000000400644 in print ()
+1: x/i $pc
+=> 0x400644 <print+28>:	add	x22, x22, #0x1
+(gdb) ni
+0x0000000000400648 in print ()
+1: x/i $pc
+=> 0x400648 <print+32>:	b	0x4005d8 <test>
+(gdb) ni
+x = -3, y = -50: Current maximum for y = 96
+0x0000000000400640 in print ()
+1: x/i $pc
+=> 0x400640 <print+24>:	add	x19, x19, #0x1
+(gdb) ni
+0x0000000000400644 in print ()
+1: x/i $pc
+=> 0x400644 <print+28>:	add	x22, x22, #0x1
+(gdb) ni
+0x0000000000400648 in print ()
+1: x/i $pc
+=> 0x400648 <print+32>:	b	0x4005d8 <test>
+(gdb) ni
+x = -2, y = -36: Current maximum for y = 96
+0x0000000000400640 in print ()
+1: x/i $pc
+=> 0x400640 <print+24>:	add	x19, x19, #0x1
+(gdb) ni
+0x0000000000400644 in print ()
+1: x/i $pc
+=> 0x400644 <print+28>:	add	x22, x22, #0x1
+(gdb) ni
+0x0000000000400648 in print ()
+1: x/i $pc
+=> 0x400648 <print+32>:	b	0x4005d8 <test>
+(gdb) ni
+x = -1, y = -4: Current maximum for y = 96
+0x0000000000400640 in print ()
+1: x/i $pc
+=> 0x400640 <print+24>:	add	x19, x19, #0x1
+(gdb) ni
+0x0000000000400644 in print ()
+1: x/i $pc
+=> 0x400644 <print+28>:	add	x22, x22, #0x1
+(gdb) ni
+0x0000000000400648 in print ()
+1: x/i $pc
+=> 0x400648 <print+32>:	b	0x4005d8 <test>
+(gdb) ni
+x = 0, y = 16: Current maximum for y = 96
+0x0000000000400640 in print ()
+1: x/i $pc
+=> 0x400640 <print+24>:	add	x19, x19, #0x1
+(gdb) c
+Continuing.
+x = 1, y = -6: Current maximum for y = 96
+x = 2, y = -100: Current maximum for y = 96
+x = 3, y = -296: Current maximum for y = 96
+x = 4, y = -624: Current maximum for y = 96
+x = 5, y = -1114: Current maximum for y = 96
+x = 6, y = -1796: Current maximum for y = 96
+[Inferior 1 (process 9805) exited normally]
+(gdb) q
+]0;son.tran@csa2:~/CPSC_355/assignment/assign2son.tran@csa2:~/CPSC_355/assignment/assign2$ exit
+exit
+
+Script done on 2021-02-14 23:21:57-07:00
