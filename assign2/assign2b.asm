@@ -66,7 +66,7 @@ loop:       mov     y_r, 0                                              // Set y
             mov     c_r, 4                                              // Set "c_r" macro to immediate value of 4, this will be the third term (4x) of the function
             madd    y_r, c_r, x_r, y_r                                  // Compute 4x and add current value of y (-5x^3 - 21x^2), then store result in y (now -5x^3 - 21x^2 + 4x)
 
-            add     y_r, y_r, 16                                        // Add value of constant term (16) to y and override (now -5x^3 - 21x^2 + 4x + 16)
+result:     add     y_r, y_r, 16                                        // Add value of constant term (16) to y and override (now -5x^3 - 21x^2 + 4x + 16)
 
             cmp     count_r, 0                                          // Compare loop counter to 0
             b.eq    Ymax                                                // If loop counter = 0, then branch to "Ymax" and set the current maximum value of y to the current value of y
@@ -89,7 +89,7 @@ print:      adrp    x0, fmt                                             // Set f
             b       test                                                // Branch to "test" to check if current value of x is within the range [-5, 6]   
 
 test:       cmp     x_r, 6                                              // Compare the current value of x to the maximum range value of 6 -- PRE-TEST LOOP
-            b.le    loop                                                // If x > 6 is satisfied, then branch to "done"
+            b.le    loop                                                // If x > 6 is satisfied, then proceed to "done"
 
 done:       mov     x0, 0                                               // Set return value
             ldp     x29, x30, [sp], 16                                  // Restore stack

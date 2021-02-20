@@ -62,7 +62,7 @@ test:       cmp     x19, 6                                              // Compa
             add     x20, x20, x23                                       // Add value of leading term (-5x^3) to y and override 
             add     x20, x20, x24                                       // Add value of second term (-21x^2) to y and override
             add     x20, x20, x25                                       // Add value of third term (4x) to y and override
-            add     x20, x20, 16                                        // Add value of constant term (16) to y and override
+result:     add     x20, x20, 16                                        // Add value of constant term (16) to y and override
 
             cmp     x22, 0                                              // Compare loop counter to 0
             b.eq    Ymax                                                // If loop counter = 0, then branch to "Ymax" and set the current maximum value of y to the current value of y
